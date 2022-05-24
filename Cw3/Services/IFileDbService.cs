@@ -1,8 +1,5 @@
 ﻿using Cw3.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Cw3.Services
 {
@@ -11,5 +8,7 @@ namespace Cw3.Services
         IEnumerable<Student> GetStudents();
         Student GetStudent(string indexNumber);
         bool AddStudent(Student student);
+        Student PutStudent(Student student);
+        bool RemoveStudent(string indexNumber);
     }
 }

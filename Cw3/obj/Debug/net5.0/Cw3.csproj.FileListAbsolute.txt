@@ -21,3 +21,9 @@ C:\Users\mateusz.gorski\source\repos\cwiczenia3_mp-s20226\Cw3\obj\Debug\net5.0\C
 C:\Users\mateusz.gorski\source\repos\cwiczenia3_mp-s20226\Cw3\obj\Debug\net5.0\ref\Cw3.dll
 C:\Users\mateusz.gorski\source\repos\cwiczenia3_mp-s20226\Cw3\obj\Debug\net5.0\Cw3.pdb
 C:\Users\mateusz.gorski\source\repos\cwiczenia3_mp-s20226\Cw3\obj\Debug\net5.0\Cw3.genruntimeconfig.cache
+C:\Users\mateusz.gorski\source\repos\cwiczenia3_mp-s20226\Cw3\bin\Debug\net5.0\CsvHelper.dll
+C:\Users\mateusz.gorski\source\repos\cwiczenia3_mp-s20226\Cw3\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\mateusz.gorski\source\repos\cwiczenia3_mp-s20226\Cw3\obj\Debug\net5.0\Cw3.csproj.CopyComplete
+C:\Users\mateusz.gorski\source\repos\cwiczenia3_mp-s20226\Cw3\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\mateusz.gorski\source\repos\cwiczenia3_mp-s20226\Cw3\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\mateusz.gorski\source\repos\cwiczenia3_mp-s20226\Cw3\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll

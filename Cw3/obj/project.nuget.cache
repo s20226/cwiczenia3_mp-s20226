@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "JigPpUsxMQYtLTGGamB5I/SCIIvpjcEifv538ss1PrWkAdmQ1btlZXzlR6JzSZPB0uNAlHriPFU9UUou8Y3rEQ==",
+  "dgSpecHash": "6svBlPjBmLVz5pur9ammm3MAj/Eep0ZvdxJcoJIJ7O0cLNgdm3D2eUNgKgCzMsU4OWeHlefyb4/q3auq9adSeA==",
   "success": true,
   "projectFilePath": "C:\\Users\\mateusz.gorski\\source\\repos\\cwiczenia3_mp-s20226\\Cw3\\Cw3.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\mateusz.gorski\\.nuget\\packages\\csvhelper\\27.2.1\\csvhelper.27.2.1.nupkg.sha512",
+    "C:\\Users\\mateusz.gorski\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.17\\microsoft.aspnetcore.jsonpatch.5.0.17.nupkg.sha512",
+    "C:\\Users\\mateusz.gorski\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\5.0.17\\microsoft.aspnetcore.mvc.newtonsoftjson.5.0.17.nupkg.sha512",
+    "C:\\Users\\mateusz.gorski\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\mateusz.gorski\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\mateusz.gorski\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,15 +1,11 @@
 ﻿using Cw3.Models;
 using Cw3.Services;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Cw3.Controllers
 {
-    [Route("[controller]")]
+    // [Route("[controller]")]
+    [Route("api/students")]
     [ApiController]
     public class StudentsController : ControllerBase
     {
@@ -17,7 +13,9 @@ namespace Cw3.Controllers
         public StudentsController(IFileDbService fileDbService)
         {
             _fileDbService = fileDbService;
+
         }
+
 
         [HttpGet]
         public IActionResult GetStudents()
@@ -32,15 +30,43 @@ namespace Cw3.Controllers
         public IActionResult GetStudent(string indexNumber)
         {
             var student = _fileDbService.GetStudent(indexNumber);
-            if (student is null) return NotFound("Nie znaleziono studenta");
+            if (student is null) {
+                return NotFound("Student not found");
+            }
+
             return Ok(student);
         }
 
         [HttpPost]
-        public IActionResult AddStudent(Student student)
+        public IActionResult AddStudent(Student newStudent)
         {
-            //logika dodawania studenta
-            return Created("", student);
+            if (!_fileDbService.AddStudent(newStudent)) {
+                return BadRequest($"Student cant be added, {newStudent.IndexNumber} is taken");
+            }
+
+
+            return Created("Student added", newStudent);
         }
+        [HttpDelete("{indexNumber}")]
+        public IActionResult RemoveStudent(string indexNumber)
+        {
+            if (!_fileDbService.RemoveStudent(indexNumber)) {
+                return BadRequest($"Can't assign {indexNumber} to any student. Delete action failed");
+            }
+
+            return Ok($"Usuwanie zakonczone {indexNumber}");
+        }
+
+        [HttpPut("{indexNumber}")]
+        public IActionResult PutStudent(Student student)
+        {
+            var updatedStudent = _fileDbService.PutStudent(student);
+            if (updatedStudent is null) {
+                return NotFound("Student not found");
+            }
+
+            return Created($"Student with {student.IndexNumber} updated", updatedStudent);
+        }
+
     }
 }
