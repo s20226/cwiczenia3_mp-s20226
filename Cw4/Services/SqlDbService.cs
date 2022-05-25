@@ -1,4 +1,5 @@
 ﻿using Cw4.Models;
+using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 
@@ -6,11 +7,15 @@ namespace Cw4.Services
 {
     public class SqlDbService : IDbService
     {
-        private readonly string _connectionString = @"Server=localhost,1433; Database=Master; User Id = SA; Password=Pass@word";
+        private readonly IConfiguration _configure;
+        public SqlDbService(IConfiguration configuration)
+        {
+            _configure = configuration;
+        }
 
         public void AddAnimal(Animal animal)
         {
-            using (var con = new SqlConnection(_connectionString)) {
+            using (var con = new SqlConnection(_configure.GetConnectionString("Default"))) {
                 var com = new SqlCommand(
                     $"INSERT INTO Animal (Name, Description, Category, Area)" +
                     $"VALUES (@param1, @param2, @param3, @param4)", con);
@@ -27,7 +32,7 @@ namespace Cw4.Services
         {
             var res = new List<Animal>();
             //System.Data.SqlClient
-            using (var con = new SqlConnection(_connectionString)) {
+            using (var con = new SqlConnection(_configure.GetConnectionString("Default"))) {
                 var com = new SqlCommand($"SELECT * FROM Animal ORDER BY {orderBy}", con);
                 con.Open();
                 var dr = com.ExecuteReader();
@@ -47,7 +52,7 @@ namespace Cw4.Services
 
         public void PutAnimal(Animal animal)
         {
-            using (var con = new SqlConnection(_connectionString)) {
+            using (var con = new SqlConnection(_configure.GetConnectionString("Default"))) {
                 var com = new SqlCommand(
                     $"UPDATE Animal " +
                     $"SET Name = @param1, Description=@param2, Category=@param3, Area=@param4 " +
@@ -65,7 +70,7 @@ namespace Cw4.Services
 
         public void RemoveAnimal(string idAnimal)
         {
-            using (var con = new SqlConnection(_connectionString)) {
+            using (var con = new SqlConnection(_configure.GetConnectionString("Default"))) {
                 var com = new SqlCommand(
                     $"DELETE FROM Animal " +
                     $"where idAnimal=@param1", con);
