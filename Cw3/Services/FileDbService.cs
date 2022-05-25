@@ -33,7 +33,6 @@ namespace Cw3.Services
                         continue;
                     }
 
-
                     var student = new Student {
 
                         FirstName = splited[0],

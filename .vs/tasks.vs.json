@@ -5,6 +5,11 @@
       "taskLabel": "zadanie-cwiczenia3_mp-s20226",
       "appliesTo": "/",
       "type": "launch"
+    },
+    {
+      "taskLabel": "zadanie-Cw4",
+      "appliesTo": "Cw4/",
+      "type": "launch"
     }
   ]
 }
